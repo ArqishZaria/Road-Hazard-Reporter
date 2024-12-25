@@ -1,0 +1,24 @@
+{% extends "reporter/base.html" %}
+
+{% block content %}
+    <style>
+        body {
+            background-color: #000; /* Black background for the whole page */
+            color: #fff; /* White text color */
+        }
+
+        #map-container {
+            background-color: #333; /* Dark background for the map container */
+            border-radius: 10px; /* Rounded corners */
+            padding: 5px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for the container */
+            margin-top: -60px; /* Move the map container upwards */
+            border: 10px solid #28a745; /* Green border around the map container */
+        }
+    </style>
+
+    <div id="map-container">
+        {{ map|safe }}
+    </div>
+    
+{% endblock content %}
