@@ -1,0 +1,25 @@
+{% load static %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- Home button -->
+<a href="{% url 'reporter:index' %}" class="btn btn-primary">Home</a>
+
+<!-- Block for content insertion -->
+<div class="container mt-5">
+    {% block content %}
+    <!-- Child template content will be inserted here -->
+    {% endblock %}
+</div>
+
+<style>
+    .btn-primary {
+        background-color: #28a745; /* Bootstrap primary button color changed to green */
+        border-color: #28a745; /* Button border color changed to green */
+        color: #fff;
+    }
+
+    .btn-primary:hover {
+        background-color: #218838; /* Darker shade of green on hover */
+        border-color: #1e7e34; /* Darker border on hover */
+    }
+</style>
